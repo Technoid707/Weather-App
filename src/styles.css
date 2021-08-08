@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 5em;
+}
+.app-wrapper {
+  background-color: lightblue;
+  background: url("../media/img4.jpg") repeat-y;
+  opacity: 0.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-box {
+  margin-top: 80px;
+}
+.weather-details {
+  text-align: center;
+  margin: 160px auto 120px;
+  color: #fff;
+}
+
+.weekdays-weather {
+  text-align: center;
+  margin: 0px auto;
+}
+
+.weekday {
+  padding: 40px 30px;
+  color: #fabd05;
+}
+
+.cloud-sun {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

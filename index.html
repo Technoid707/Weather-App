@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/880d3f2ac1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="src/styles.css" rel="stylesheet" />
+    <title>Weather App real</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row m-5">
+        <div class="app-wrapper rounded">
+          <div class="search-box">
+            <form class="row g-3 justify-content-center" id="searchEngine">
+              <div class="col-8">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Search City"
+                  class="form-control"
+                  aria-label="search for city weather"
+                  id="searchCity"
+                />
+              </div>
+              <div class="col-auto">
+                <button class="btn btn-warning" type="submit">Search</button>
+                <button class="btn btn-primary" type="button" id="currentLoc">
+                  Current
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="weather-details">
+            <h2 id="location">Fairfax, VA</h2>
+            <p style="color: #fff" id="currentTime"></p>
+            <h1 id="temp" style="display: inline">25</h1>
+            <span style="font-size: small"
+              ><a
+                href="#"
+                id="celsius"
+                style="color: yellow; text-decoration: none"
+                >C&#176;</a
+              >|<a
+                href="#"
+                id="fahrenheit"
+                style="color: yellow; text-decoration: none"
+                >&#176;F</a
+              ></span
+            >
+            <h5 id="weatherDesc">Partly Cloudy</h5>
+            <!-- <p>H:34&#176; &nbsp;&nbsp; L:23&#176;</p> -->
+          </div>
+
+          <div class="row weekdays-weather justify-content-center">
+            <div class="weekday col-2 m-2">
+              <h5>Monday</h5>
+              <i class="fas fa-cloud-showers-heavy cloud-sun"></i><br />
+              <h3>33&#176;</h3>
+            </div>
+            <div class="weekday col-2 m-2">
+              <h5>Tuesday</h5>
+              <i class="fas fa-cloud-sun cloud-sun"></i><br />
+              <h3>34&#176;</h3>
+            </div>
+            <div class="weekday col-2 m-2">
+              <h5>Wednesday</h5>
+              <i class="fas fa-cloud-rain cloud-sun"></i><br />
+              <h3>33&#176;</h3>
+            </div>
+            <div class="weekday col-2 m-2">
+              <h5>Thursday</h5>
+              <i class="fas fa-cloud cloud-sun"></i><br />
+              <h3>34&#176;</h3>
+            </div>
+            <div class="weekday col-2 m-2">
+              <h5>Friday</h5>
+              <i class="fas fa-cloud-sun-rain cloud-sun"></i><br />
+              <h3>28&#176;</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
