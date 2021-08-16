@@ -48,13 +48,13 @@ function displayCurrentDate() {
   //Current Time
   let time = new Date();
   let weekday = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
   let hour = time.getHours();
   let minute = time.getMinutes();
