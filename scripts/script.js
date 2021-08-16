@@ -57,7 +57,15 @@ function displayCurrentDate() {
     "Saturday",
   ];
   let hour = time.getHours();
+  if (hour < 10){
+    hour = `0${hour}`
+  }
+
   let minute = time.getMinutes();
+if (minute < 10){
+  minute = `0${minute}`
+}
+
   let date = weekday[time.getDay()] + " " + hour + ":" + minute;
   //display the time in the html location
   let cTime = document.querySelector("#currentTime");
