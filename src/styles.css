@@ -50,3 +50,26 @@ h1 {
 .open-src a{
   text-decoration:none;
 }
+#weather-icon{
+  margin-top:-40px;
+}
+
+#weatherDesc{
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#currentTime{
+color: #fff;
+}
+
+
+ul li{
+  display: inline;
+  list-style: none;
+}
+
+#location{
+  text-transform: capitalize;
+}
