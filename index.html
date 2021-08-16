@@ -35,7 +35,7 @@
                 />
               </div>
               <div class="col-auto">
-                <button class="btn btn-warning" type="submit">Search</button>
+                <button class="btn btn-warning" type="subm it">Search</button>
                 <button class="btn btn-primary" type="button" id="currentLoc">
                   Current
                 </button>
@@ -44,8 +44,12 @@
           </div>
           <div class="weather-details">
             <h2 id="location">Fairfax, VA</h2>
-            <p style="color: #fff" id="currentTime"></p>
+            <p id="weatherDesc">Sunny</p>
+            <p id="currentTime"></p>
+            
+            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" width="120" id="weather-icon"/>
             <h1 id="temp" style="display: inline">25</h1>
+    
             <span style="font-size: small"
               ><a
                 href="#"
@@ -57,9 +61,11 @@
                 id="fahrenheit"
                 style="color: yellow; text-decoration: none"
                 >&#176;F</a
-              ></span
-            >
-            <h5 id="weatherDesc">Partly Cloudy</h5>
+              ></span>
+           <ul>
+            <li class="m-2">Wind: <span id="wind"> </span></li>
+            <li class="m-2">Humidity: <span id=humidity> </span></li>
+           </ul>
             <!-- <p>H:34&#176; &nbsp;&nbsp; L:23&#176;</p> -->
           </div>
 
