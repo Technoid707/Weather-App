@@ -15,6 +15,30 @@ function handleSubmit(event) {
   
 }
 
+function forecast(){
+  forecastElement = document.querySelector("#forecast");
+  weekdays = ["Sun", "Mon", "Tue", "Wed", "Thurs"];
+  forecastHTML = `<div class="row weekdays-weather justify-content-center">`
+  weekdays.forEach(function(days){ 
+    forecastHTML = forecastHTML + ` 
+    <div class="daily-forcast col-2 m-2">
+      <div class="weather-forcast-date">${days}</div>
+      <img src="http://openweathermap.org/img/wn/02d@2x.png" alt="" width="36" />
+      <div class="weather-forecast-temperature">
+        <span class="weather-forecast-temperature-max ">18</span>
+        <span class="weather-forecast-temperature-min">12</span>
+      </div>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+console.log(forecastHTML);
+}
+
+forecast();
+
 function displayWeatherCondition(response) {
   console.log(response);
   document.querySelector("#location").innerHTML = response.data.name;
