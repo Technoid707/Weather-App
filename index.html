@@ -42,14 +42,15 @@
               </div>
             </form>
           </div>
+          <!-- weather Details -->
           <div class="weather-details">
-            <h2 id="location">Fairfax, VA</h2>
-            <p id="weatherDesc">Sunny</p>
             <p id="currentTime"></p>
+            <h2 id="location"></h2>
             
+           
+            <div id="current-temparature">
             <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" width="120" id="weather-icon"/>
-            <h1 id="temp" style="display: inline">25</h1>
-    
+            <h1 id="temp" style="display: inline">25</h1>            
             <span style="font-size: small"
               ><a
                 href="#"
@@ -62,17 +63,24 @@
                 style="color: yellow; text-decoration: none"
                 >&#176;F</a
               ></span>
+            </div>
+            <div>
+              <span id="feels-like" class="p-2">Feels Like: 20</span>
+              <span id="weatherDesc"></span>
+              
+            </div>
+              
            <ul>
             <li class="m-2">Wind: <span id="wind"> </span></li>
             <li class="m-2">Humidity: <span id=humidity> </span></li>
-           </ul>
-            <!-- <p>H:34&#176; &nbsp;&nbsp; L:23&#176;</p> -->
+           </ul>            
           </div>
-        <!-- Added daily Forecast-->
+        <!-- Daily Forecast-->
         <div class="weather-forecast" id="forecast"> 
         </div>
  
         </div>
+        <!-- Open Source-->
         <div class="mt-2 open-src"><p><a href="https://github.com/Technoid707/Weather-App">Open-source code</a>, by Farnaz Namdarian</p></div>
 
       </div>

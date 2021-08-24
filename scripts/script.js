@@ -15,7 +15,8 @@ function handleSubmit(event) {
   
 }
 
-function forecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   forecastElement = document.querySelector("#forecast");
   weekdays = ["Sun", "Mon", "Tue", "Wed", "Thurs"];
   forecastHTML = `<div class="row weekdays-weather justify-content-center">`
@@ -34,13 +35,12 @@ function forecast(){
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-console.log(forecastHTML);
+//console.log(forecastHTML);
 }
 
-forecast();
 
 function displayWeatherCondition(response) {
-  console.log(response);
+ // console.log(response);
   document.querySelector("#location").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#weatherDesc").innerHTML = response.data.weather[0].description;
@@ -51,11 +51,18 @@ function displayWeatherCondition(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
   convertDegree(Math.round(response.data.main.temp));
+  getForecast(response.data.coord);
 }
 
+function getForecast(coordinates){
+  //console.log(coordinates);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
   function searchLocation(position) {
-    console.log(position);
+    //console.log(position);
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeatherCondition);
   }
@@ -116,8 +123,7 @@ function convertDegree(cityTemp) {
   }
 }
 
-displayCurrentDate();
-searchCity("New York");
+
 
 //Display the search items
 let form = document.querySelector("#searchEngine");
@@ -125,3 +131,7 @@ form.addEventListener("submit", handleSubmit);
 
 let currentLocation = document.querySelector("#currentLoc");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+
+displayCurrentDate();
+searchCity("New York");

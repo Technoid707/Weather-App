@@ -57,9 +57,10 @@ h1 {
   margin-top:-40px;
 }
 
-#weatherDesc{
+#weatherDesc, 
+#feels-like{
   margin-bottom: 5px;
-  font-weight: bold;
+
   text-transform: capitalize;
 }
 
