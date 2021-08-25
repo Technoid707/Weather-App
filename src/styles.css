@@ -18,12 +18,34 @@ h1 {
 .search-box {
   margin-top: 80px;
 }
-.weather-details {
-  text-align: center;
-  margin: 160px auto 120px;
+
+#weather-details > h2,
+#weather-details > ul
+ {
+  text-align: left;
   color: #fff;
 }
 
+#weather-details > h2{
+  padding-left: 2rem;
+}
+#weather-details, 
+#current-temparature{
+  margin: 120px 0 60px;
+}
+
+#current-temparature{
+  color: #fff;
+  text-align: left;
+}
+
+#celsius{
+  color: #fff; 
+  text-decoration: none; 
+  margin-bottom: 260px;
+  position: relative;
+  top: -38px
+}
 .weekdays-weather,
 .weather-forecast {
   text-align: center;
@@ -34,8 +56,9 @@ h1 {
 .daily-forcast {
   padding: 40px 30px;
   color: #fabd05;  
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
+
 
 .cloud-sun {
   font-size: 30px;
@@ -62,6 +85,9 @@ h1 {
   margin-bottom: 5px;
 
   text-transform: capitalize;
+}
+#wind, #humidity{
+  color: #fabd05;  
 }
 
 #currentTime{

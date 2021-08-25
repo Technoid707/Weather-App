@@ -36,8 +36,8 @@ function displayForecast(response){
       <div class="weather-forcast-date">${formatDay(forecastDays.dt)}</div>
       <img src="http://openweathermap.org/img/wn/${forecastDays.weather[0].icon}@2x.png" alt="" width="36" />
       <div class="weather-forecast-temperature">
-        <span class="weather-forecast-temperature-max ">${Math.round(forecastDays.temp.max)}</span>
-        <span class="weather-forecast-temperature-min">${Math.round(forecastDays.temp.min)}</span>
+        <span class="weather-forecast-temperature-max ">&#176;${Math.round(forecastDays.temp.max)}</span>
+        <span class="weather-forecast-temperature-min">&#176;${Math.round(forecastDays.temp.min)}</span>
       </div>
     </div>
     `;
@@ -60,16 +60,17 @@ function getForecast(coordinates){
 
 function displayWeatherCondition(response) {
  // console.log(response);
+ let weatherDescription = response.data.weather[0].description;
+ console.log(weatherDescription);
   document.querySelector("#location").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#weatherDesc").innerHTML = response.data.weather[0].description;
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed) + " mph";
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity + "%";
   let weatherIcon = document.querySelector("img#weather-icon");
   weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` )
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
-  convertDegree(Math.round(response.data.main.temp));
   getForecast(response.data.coord);
 }
 
@@ -114,28 +115,6 @@ if (minute < 10){
   let cTime = document.querySelector("#currentTime");
   cTime.innerHTML = date;
 }
-
-
-//Convert celcius to Farenheight
-function convertDegree(cityTemp) {
-  
-  let celsius = document.querySelector("#celsius");
-  let fahrenheit = document.querySelector("#fahrenheit");
-  celsius.addEventListener("click", displayC);
-  fahrenheit.addEventListener("click", displayF);
-
-  function displayC(event) {
-    event.preventDefault();
-    temp.innerHTML = cityTemp;
-  }
-
-  function displayF(event) {
-    event.preventDefault();
-    temp.innerHTML = Math.round(cityTemp * 1.8 + 32);
-  }
-}
-
-
 
 //Display the search items
 let form = document.querySelector("#searchEngine");
