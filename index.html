@@ -43,30 +43,32 @@
             </form>
           </div>
 
-<!--TEST-->
-<div class="row">
-  <div class="col-7">
+        <!--Weather Details-->
+        <div class="row">
+  <div class="col-6">
     <div id="weather-details">
-           <h2 class="m-2" id="location"></h2>
+           <h2 class="m-1" id="location"></h2>
            <ul>
-            <li class="m-2"> <span  id="currentTime"></span> </li><br>
-            <li class="m-2"> <span  id="weatherDesc"></span> </li>
-            <li class="m-2">Wind: <span id="wind"> </span></li>
-            <li class="m-2">Humidity: <span id=humidity> </span></li>
+            <li class="m-1"> <span  id="currentTime"></span> </li><br>
+            <li class="m-1"> <span  id="weatherDesc"></span> </li>
+            <li class="m-1">Wind: <span id="wind"> </span></li>
+            <li class="m-1">Humidity: <span id=humidity> </span></li>
            </ul>
   </div>
 </div>
-  <div class="col-5">
+  <div class="col-6">
     <div id="current-temparature">
       <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" width="120" id="weather-icon"/>
-      <h1 id="temp" style="display: inline"></h1>         
-      <span style="font-size: large"
+      <h1 id="temp"></h1>         
+      <span style="font-size: medium"
         ><a
           href="#"
           id="celsius"
-          >&#176;F</a
-        >
-      </div>
+          >&#176;C</a
+        ><a
+        href="#"
+        id="fahrenheit"
+        > | &#176;F</a>
      
   </div>
 </div>
@@ -77,12 +79,13 @@
         </div>
  
         </div>
+       </div>  <!-- End app-wrapper-->
         <!-- Open Source-->
         <div class="mt-2 open-src"><p><a href="https://github.com/Technoid707/Weather-App">Open-source code</a>, by Farnaz Namdarian</p></div>
+      </div> <!-- End row-->
+    </div>  <!-- End container-->
 
-      </div>
-      
-    </div>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
