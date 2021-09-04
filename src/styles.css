@@ -8,6 +8,10 @@ h1 {
   font-size: 5em;
 }
 
+.f-12{
+font-size: 12px;
+}
+
 .app-wrapper {
   /* background-color: lightblue;
   background: url("../media/img4.jpg") repeat-y;
