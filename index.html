@@ -22,6 +22,7 @@
     <div class="container">
       <div class="row m-5">
         <div class="app-wrapper rounded">
+          <div id="weatherBg"></div>
           <div class="search-box">
             <form class="row g-3 justify-content-center" id="searchEngine">
               <div class="col-8">
@@ -42,50 +43,50 @@
               </div>
             </form>
           </div>
-          <!-- weather Details -->
-          <div class="weather-details">
-            <p id="currentTime"></p>
-            <h2 id="location"></h2>
-            
-           
-            <div id="current-temparature">
-            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" width="120" id="weather-icon"/>
-            <h1 id="temp" style="display: inline">25</h1>            
-            <span style="font-size: small"
-              ><a
-                href="#"
-                id="celsius"
-                style="color: yellow; text-decoration: none"
-                >C&#176;</a
-              >|<a
-                href="#"
-                id="fahrenheit"
-                style="color: yellow; text-decoration: none"
-                >&#176;F</a
-              ></span>
-            </div>
-            <div>
-              <span id="feels-like" class="p-2">Feels Like: 20</span>
-              <span id="weatherDesc"></span>
-              
-            </div>
-              
+
+        <!--Weather Details-->
+        <div class="row">
+  <div class="col-6">
+    <div id="weather-details">
+           <h2 class="m-1" id="location"></h2>
            <ul>
-            <li class="m-2">Wind: <span id="wind"> </span></li>
-            <li class="m-2">Humidity: <span id=humidity> </span></li>
-           </ul>            
-          </div>
+            <li class="m-1"> <span  id="currentTime"></span></li>,
+            <li class="m-1"> <span  id="weatherDesc"></span></li><br>
+            <li class="m-1 f-12">Wind: <span id="wind"> </span></li>
+            <li class="m-1 f-12">Humidity: <span id=humidity> </span></li>
+           </ul>
+  </div>
+</div>
+  <div class="col-6">
+    <div id="current-temparature">
+      <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" width="120" id="weather-icon"/>
+      <h1 id="temp"></h1>         
+      <span style="font-size: medium"
+        ><a
+          href="#"
+          id="celsius"
+          >&#176;C</a
+        ><a
+        href="#"
+        id="fahrenheit"
+        > | &#176;F</a>
+     
+  </div>
+</div>
+
+          
         <!-- Daily Forecast-->
         <div class="weather-forecast" id="forecast"> 
         </div>
  
         </div>
+       </div>  <!-- End app-wrapper-->
         <!-- Open Source-->
         <div class="mt-2 open-src"><p><a href="https://github.com/Technoid707/Weather-App">Open-source code</a>, by Farnaz Namdarian</p></div>
+      </div> <!-- End row-->
+    </div>  <!-- End container-->
 
-      </div>
-      
-    </div>
+
     <script src="scripts/script.js"></script>
   </body>
 </html>

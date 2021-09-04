@@ -7,34 +7,74 @@
 h1 {
   font-size: 5em;
 }
+
+.f-12{
+font-size: 12px;
+}
+
 .app-wrapper {
-  background-color: lightblue;
+  /* background-color: lightblue;
   background: url("../media/img4.jpg") repeat-y;
-  opacity: 0.8;
+  opacity: 0.8; */
+  position: relative;
+  z-index: 1;
   max-width: 700px;
   margin: 0 auto;
+}
+.app-wrapper:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../media/img4.jpg") repeat-y;
+  opacity: 0.8;
 }
 
 .search-box {
   margin-top: 80px;
 }
-.weather-details {
-  text-align: center;
-  margin: 160px auto 120px;
+
+#weather-details > h2,
+#weather-details > ul {
+  text-align: left;
   color: #fff;
 }
 
+#weather-details > h2 {
+  padding-left: 2rem;
+}
+#weather-details,
+#current-temparature {
+  margin: 120px 0 60px;
+}
+
+#current-temparature {
+  color: #fff;
+  text-align: left;
+  padding-right: 20px;
+}
+
+#celsius,
+#fahrenheit {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 260px;
+  position: relative;
+  top: -38px;
+}
 .weekdays-weather,
 .weather-forecast {
   text-align: center;
   margin: 0px auto;
-  
 }
 
 .daily-forcast {
   padding: 40px 30px;
-  color: #fabd05;  
-  font-size: 1.25rem;
+  color: #fabd05;
+  font-size: 1rem;
 }
 
 .cloud-sun {
@@ -44,49 +84,53 @@ h1 {
   padding: 20px;
 }
 
-.open-src{
+.open-src {
   margin: 0 auto;
-  max-width:700px;
-
+  max-width: 700px;
 }
 
-.open-src a{
-  text-decoration:none;
+.open-src a {
+  text-decoration: none;
 }
-#weather-icon{
-  margin-top:-40px;
+#weather-icon {
+  margin-top: -40px;
 }
 
-#weatherDesc, 
-#feels-like{
+#weatherDesc,
+#feels-like {
   margin-bottom: 5px;
 
   text-transform: capitalize;
 }
-
-#currentTime{
-color: #fff;
+#wind,
+#humidity {
+  color: #fabd05;
 }
 
+#temp {
+  display: inline;
+}
+#currentTime {
+  color: #fff;
+}
 
-ul li{
+ul li {
   display: inline;
   list-style: none;
 }
 
-#location{
+#location {
   text-transform: capitalize;
 }
 
-.weather-forcast-date{
-  color:#fff;
+.weather-forcast-date {
+  color: #fff;
 }
 
-.weather-forecast-temperature-max{
-font-weight: 500;
+.weather-forecast-temperature-max {
+  font-weight: 500;
 }
 
-
-.weather-forecast-temperature-min{
-opacity: 0.7;
+.weather-forecast-temperature-min {
+  opacity: 0.7;
 }
