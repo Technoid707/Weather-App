@@ -34,6 +34,10 @@ font-size: 12px;
   border-radius:20px;
 }
 
+button.btn-warning{
+color: #3A3B3C;
+}
+
 .search-box {
   margin-top: 80px;
 }
