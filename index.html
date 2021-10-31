@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="row m-5">
-        <div class="app-wrapper">
+        <div class="app-wrapper" id="weatherBG">
           <div id="weatherBg"></div>
           <div class="search-box">
             <form class="row g-3 justify-content-center" id="searchEngine">
@@ -43,17 +43,21 @@
               </div>
             </form>
           </div>
-
+<div class="row">
+  <div class="col-3">
+       <button class="btn btn-danger" type="button" id="bgImg-btn">Try Me</button>
+  </div>
+</div>
         <!--Weather Details-->
-        <div class="row">
+<div class="row">
   <div class="col-6">
     <div id="weather-details">
            <h2 class="m-1" id="location"></h2>
            <ul>
-            <li class="m-1"> <span  id="currentTime"></span></li>,
-            <li class="m-1"> <span  id="weatherDesc"></span></li><br>
-            <li class="m-1 f-12">Wind: <span id="wind"> </span></li>
-            <li class="m-1 f-12">Humidity: <span id=humidity> </span></li>
+              <li class="m-1"> <span  id="currentTime"></span></li>,
+              <li class="m-1"> <span  id="weatherDesc"></span></li><br>
+              <li class="m-1 f-12">Wind: <span id="wind"> </span></li>
+              <li class="m-1 f-12">Humidity: <span id=humidity> </span></li>
            </ul>
   </div>
 </div>
@@ -82,7 +86,7 @@
         </div>
        </div>  <!-- End app-wrapper-->
         <!-- Open Source-->
-        <div class="mt-2 open-src"><p><a href="https://github.com/Technoid707/Weather-App">Open-source code</a>, by Farnaz Namdarian</p></div>
+        <div class="mt-2 open-src"><p><a href="https://github.com/Technoid707/Weather-App">Open-source code</a>, by Farnaz  2021</p></div>
       </div> <!-- End row-->
     </div>  <!-- End container-->
 

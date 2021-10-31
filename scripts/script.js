@@ -153,3 +153,11 @@ currentLocation.addEventListener("click", getCurrentLocation);
 
 displayCurrentDate();
 searchCity("New York");
+
+function changeBG() {
+  document.getElementById("weatherBG").style.backgroundColor = "purple";
+  document.getElementById("weatherBG").style.borderRadius = "20px";
+}
+
+let backgroundImg = document.querySelector("#bgImg-btn");
+backgroundImg.addEventListener("click", changeBG);
